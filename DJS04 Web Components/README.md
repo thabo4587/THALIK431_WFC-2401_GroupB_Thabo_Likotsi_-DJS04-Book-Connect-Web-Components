@@ -6,34 +6,30 @@ The "Book Connect" project provides an opportunity for students to refine a full
 
 ![alt text](image.png)
 
-#### Goals
+## Book Library Web Application
 
-- **Refactor Existing Code**: Analyse and refactor the given JavaScript and HTML code to improve its structure using objects and functions.
-- **Implement Abstraction**: Use abstraction to hide the complex reality while exposing only the necessary parts. This involves creating more generic functions that can perform tasks in a more flexible way.
-- **Documentation**: Write clear comments and documentation for the new code structure to explain the purpose and functionality of code blocks, functions, and objects.
-- **Follow Styleguides**: Adhere to established coding conventions and Styleguides to ensure code readability and maintainability.
+### Overview
 
-#### Tasks
+The Book Library Web Application is a comprehensive tool designed to manage and explore a collection of books. It consists of several custom elements:
 
-1. **Code Analysis**: Start by understanding the current implementation of the "Book Connect" application, including its HTML structure and JavaScript functionality.
-2. **Plan Refactoring**: Identify sections of the code that can be made more abstract and modular. Look for patterns and repetitive code that can be simplified.
-3. **Implement Abstraction**:
-   - **Objects**: Define objects to represent key elements of the application, such as books, authors, and genres. Utilise the provided data (e.g., `authors`, `genres`, `books`) to populate these objects.
-   - **Functions**: Create functions that handle repetitive tasks, such as rendering the book list, handling user interactions, and applying filters.
-4. **Enhance Functionality**: Ensure that the application remains fully functional after refactoring. Test all features to confirm that users can still search, filter, and view books as intended.
-5. **Documentation and Comments**: Throughout the refactoring process, document your code. Provide comments that explain the purpose and functionality of objects and functions.
-6. **Adherence to Styleguides**: Ensure your code follows JavaScript and HTML coding standards and best practices for readability and maintainability.
+- **Book List (`<book-list>`):** Renders a list of books with options for filtering and sorting.
+- **Book Preview (`<book-preview>`):** Provides detailed information about a selected book, including synopsis, author, and cover image.
+- **Search Form (`<search-form>`):** Allows users to search for books by title, author, or genre.
+- **Settings Form (`<settings-form>`):** Enables users to customize the application theme between day and night modes.
+- **Navigation Bar (`<nav-bar>`):** Facilitates navigation between different sections of the application.
 
-#### Discussion and Reflection
+### Implementation
 
-After completing the tasks, prepare a brief presentation for your coaching group on the following:
-- The rationale behind the refactoring decisions made, including the choice of objects and functions.
-- How abstraction has made the code more maintainable and extendable.
-- Any challenges faced during the refactoring process and how they were overcome.
-- Reflections on how this exercise has deepened your understanding of JavaScript programming concepts.
+Each custom element is implemented as a JavaScript class extending `HTMLElement`. Utilizing the shadow DOM ensures encapsulation of styles and scripts, preventing unintended interference with other page elements.
 
-#### Submission Guidelines
+In the `connectedCallback` method, event listeners are established to handle user interactions effectively:
 
-Submit the refactored version of the "Book Connect" application, including all HTML, CSS, and JavaScript files. Ensure that your code is well-documented and adheres to the specified Styleguides. Include a written report covering the discussion and reflection points outlined above.
+- **Search Form Submission:** Upon submitting a search query, the `search-submit` event is dispatched, carrying the specified filters for book retrieval.
+- **Book Preview Activation:** Clicking on a book triggers the `preview-click` event, passing the book ID for fetching detailed information.
+- **Settings Change:** Adjusting the theme in the Settings Form updates the application's appearance dynamically, providing a seamless user experience.
 
-Make sure to submit your project to the LMS on the DJS03 Project Tab.
+### Benefits
+
+The use of Web Components enhances modularity and scalability, allowing easy integration and maintenance of each component. Encapsulation ensures code reliability and mitigates conflicts between CSS and JavaScript, resulting in a robust and maintainable application.
+
+With its intuitive interface and extensive functionality, the Book Library Web Application offers a versatile platform for managing and exploring book collections efficiently.
