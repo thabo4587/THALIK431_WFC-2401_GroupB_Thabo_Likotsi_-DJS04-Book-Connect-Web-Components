@@ -10,13 +10,13 @@ The "Book Connect" project provides an opportunity for students to refine a full
 
 ### Overview
 
-The Book Library Web Application is a comprehensive tool designed to manage and explore a collection of books. It consists of several custom elements:
+The Book Library Web Application is a comprehensive tool designed to manage and explore a collection of books. It consists of several custom elements which I created using the Shadow DOM encapsulating the CSS and HTML and using custom elements.However I struggled with implementing the event listeners:
 
-- **Book List (`<book-list>`):** Renders a list of books with options for filtering and sorting.
+- **Book List (`<book-list>`):** This custom element renders a list of books with options for filtering and sorting.
 - **Book Preview (`<book-preview>`):** Provides detailed information about a selected book, including synopsis, author, and cover image.
 - **Search Form (`<search-form>`):** Allows users to search for books by title, author, or genre.
 - **Settings Form (`<settings-form>`):** Enables users to customize the application theme between day and night modes.
-- **Navigation Bar (`<nav-bar>`):** Facilitates navigation between different sections of the application.
+- **Navigation Bar (`<nav-bar>`):** Facilitates navigation between different sections of the application and used to search the data as well as change the theme.
 
 ### Implementation
 
@@ -28,8 +28,15 @@ In the `connectedCallback` method, event listeners are established to handle use
 - **Book Preview Activation:** Clicking on a book triggers the `preview-click` event, passing the book ID for fetching detailed information.
 - **Settings Change:** Adjusting the theme in the Settings Form updates the application's appearance dynamically, providing a seamless user experience.
 
-### Benefits
+### Struggles
 
-The use of Web Components enhances modularity and scalability, allowing easy integration and maintenance of each component. Encapsulation ensures code reliability and mitigates conflicts between CSS and JavaScript, resulting in a robust and maintainable application.
+**Event Handlers:** I struggled with implementing the event listenersfor the search and settings form for changing the theme toggling night and day.
 
-With its intuitive interface and extensive functionality, the Book Library Web Application offers a versatile platform for managing and exploring book collections efficiently.
+**Search Functionality:** I struggled with implementing the search functionality of the search form which searches and filters the data by searching for authors or genres.
+
+**Replicating Grid Layout:** My Bookpreview custom element does not perfectly replicate the original code.I tried modifying the CSS in the custom element.
+
+
+
+
+
