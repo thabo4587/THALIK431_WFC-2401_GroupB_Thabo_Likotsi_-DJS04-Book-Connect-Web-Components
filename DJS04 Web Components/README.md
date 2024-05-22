@@ -8,13 +8,15 @@ The "Book Connect" project provides an opportunity for students to refine a full
 
 ## Book Library Web Application
 
-The Book Library Web Application is a comprehensive tool designed to manage and explore a collection of books. It consists of several custom elements which I created using the Shadow DOM encapsulating the CSS and HTML and using custom elements. However, I struggled with implementing the event listeners:
+The Book Library Web Application is a comprehensive tool designed to manage and explore a collection of books. It consists of several custom elements which I created using the Shadow DOM encapsulating the CSS and HTML and using custom elements. However, I struggled with implementing the event listeners after I created my custom elements:
 
 # Project Documentation: Building a Book Search and Preview Application from Scratch
 
+## File Structure
+
 ## Introduction
 
-This documentation provides a comprehensive overview of the development process of a Book Search and Preview Application using JavaScript, HTML, and CSS. The project involves rendering book data, implementing search and filter functionalities, managing theme settings, and creating custom web components for enhanced user interaction. This guide will detail the creation of the necessary classes, the challenges encountered, and the implementation of styling and event listeners.
+This documentation provides a comprehensive overview of the development process of a Book Search and Preview Application using JavaScript, HTML, and CSS. The project involves rendering book data, implementing search and filter functionalities, managing theme settings, and creating custom web components for enhanced user interaction. This README will detail the creation of the necessary classes, the challenges encountered, and the implementation of styling and event listeners in order to refactor it using custom elements and continue where I left off with DJS03.
 
 ## Project Overview
 
@@ -76,16 +78,16 @@ The rating and review component allowed users to view average ratings, read user
 
 ### Theme Toggle Component
 
-To manage the application theme, a custom theme toggle component was created. This component rendered a button that allowed users to switch between light and dark themes.
+To manage the application theme, a custom theme toggle component was created. This component rendered a button that allowed users to switch between light and dark themes by filling in a form.The form data was then used to implement the event listerners.
 
 ## Challenges and Solutions
 
 
 ### Event Listener Implementation
 
-. Ensuring that event listeners were correctly attached and removed as needed was crucial to prevent unintended behaviors.I really struggled  with implementing these event listeners was a struggle until I realised that I had to use the event listeners I had already created in DJS03.
+Ensuring that event listeners were correctly attached and removed as needed was crucial to prevent unintended behaviors.I really struggled  with implementing these event listeners was a struggle until I realised that I had to use the event listeners I had already created in DJS03.
 
 
 ### Custom Component Development
 
-Developing custom web components required a deep understanding of the Shadow DOM and the lifecycle methods of web components. Ensuring that components were reusable, encapsulated, and interacted correctly with the rest of the application was a complex but rewarding task which taught me about the value of temawork in Software Development.
+Developing custom web components required a deep understanding of the Shadow DOM and web components. Ensuring that components were reusable with their own CSS and HTML, encapsulated, and interacted correctly with the rest of the application was a complex but rewarding task which taught me about the value of temawork in Software Development.
